@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,10 +14,10 @@
 		F912AD2E2506262700F99632 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F912AD2D2506262700F99632 /* Assets.xcassets */; };
 		F912AD312506262700F99632 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F912AD2F2506262700F99632 /* LaunchScreen.storyboard */; };
 		FCEEBA5C2E560CD700C23023 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEEBA5B2E560CD700C23023 /* Game.swift */; };
-		FCEEBA7E2E571F2700C23023 /* GameRound.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEEBA7D2E571F2700C23023 /* GameRound.swift */; };
-		FCEEBA802E571F6000C23023 /* RandomGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEEBA7F2E571F6000C23023 /* RandomGenerator.swift */; };
+		FCEEBA802E571F6000C23023 /* SecretValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEEBA7F2E571F6000C23023 /* SecretValue.swift */; };
 		FCEEBA822E572CD900C23023 /* ColorGameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEEBA812E572CD900C23023 /* ColorGameController.swift */; };
 		FCEEBA852E57302D00C23023 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEEBA842E57302D00C23023 /* MainViewController.swift */; };
+		FCEEBA872E57675100C23023 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEEBA862E57675100C23023 /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,11 +30,15 @@
 		F912AD302506262700F99632 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F912AD322506262700F99632 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCEEBA5B2E560CD700C23023 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
-		FCEEBA7D2E571F2700C23023 /* GameRound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRound.swift; sourceTree = "<group>"; };
-		FCEEBA7F2E571F6000C23023 /* RandomGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomGenerator.swift; sourceTree = "<group>"; };
+		FCEEBA7F2E571F6000C23023 /* SecretValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretValue.swift; sourceTree = "<group>"; };
 		FCEEBA812E572CD900C23023 /* ColorGameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorGameController.swift; sourceTree = "<group>"; };
 		FCEEBA842E57302D00C23023 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		FCEEBA862E57675100C23023 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		FCEEBAC82E59F93900C23023 /* Helpers */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Helpers; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		F912AD1E2506262500F99632 /* Frameworks */ = {
@@ -74,6 +78,7 @@
 				F912AD2D2506262700F99632 /* Assets.xcassets */,
 				F912AD2F2506262700F99632 /* LaunchScreen.storyboard */,
 				F912AD322506262700F99632 /* Info.plist */,
+				FCEEBAC82E59F93900C23023 /* Helpers */,
 			);
 			path = "Right on target";
 			sourceTree = "<group>";
@@ -82,8 +87,8 @@
 			isa = PBXGroup;
 			children = (
 				FCEEBA5B2E560CD700C23023 /* Game.swift */,
-				FCEEBA7F2E571F6000C23023 /* RandomGenerator.swift */,
-				FCEEBA7D2E571F2700C23023 /* GameRound.swift */,
+				FCEEBA862E57675100C23023 /* Color.swift */,
+				FCEEBA7F2E571F6000C23023 /* SecretValue.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -112,6 +117,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				FCEEBAC82E59F93900C23023 /* Helpers */,
 			);
 			name = "Right on target";
 			productName = "Right on target";
@@ -171,11 +179,11 @@
 				F912AD292506262500F99632 /* NumberGameController.swift in Sources */,
 				FCEEBA822E572CD900C23023 /* ColorGameController.swift in Sources */,
 				F912AD252506262500F99632 /* AppDelegate.swift in Sources */,
-				FCEEBA802E571F6000C23023 /* RandomGenerator.swift in Sources */,
+				FCEEBA802E571F6000C23023 /* SecretValue.swift in Sources */,
 				F912AD272506262500F99632 /* SceneDelegate.swift in Sources */,
-				FCEEBA7E2E571F2700C23023 /* GameRound.swift in Sources */,
 				FCEEBA5C2E560CD700C23023 /* Game.swift in Sources */,
 				FCEEBA852E57302D00C23023 /* MainViewController.swift in Sources */,
+				FCEEBA872E57675100C23023 /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

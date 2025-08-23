@@ -9,12 +9,6 @@ import UIKit
 
 class MainViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
-    
-
     @IBAction func numberBtnTapped() {
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NumberViewController")
         navigationController?.pushViewController(vc, animated: true)

@@ -1,15 +1,15 @@
 //
-//  ViewController.swift
+//  ColorGameController.swift
 //  Right on target
 //
-//  Created by Василий Усов on 
+//  Created by Алексей Колыченков on 21.08.2025.
 //
 
 import UIKit
 
 class NumberGameController: UIViewController {
   
-    private var game: Game! // Сущность "Игра"
+    private var game: Game<SectretNumericValue>! // Сущность "Игра"
     
     // UI на сцене
     @IBOutlet var slider: UISlider!
@@ -18,7 +18,7 @@ class NumberGameController: UIViewController {
     // MARK: - Жизненный цикл
     override func viewDidLoad() {
         super.viewDidLoad()
-        let generator = RandomValueGenerator(minRangeValue: 1, maxRangeValue: 50)!
+        let generator = SecretValue(minRangeValue: 1, maxRangeValue: 50)!
         game = Game(valueGenerator: generator, roundsCount: 3) // Создаем экземпляр сущности "Игра"
         // Обновляем данные о текущем значении загаданного числа
         updateLabel(with: game.currentRound.currentSecretValue)
