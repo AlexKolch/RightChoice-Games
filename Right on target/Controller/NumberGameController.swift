@@ -18,17 +18,19 @@ class NumberGameController: UIViewController {
     // MARK: - Жизненный цикл
     override func viewDidLoad() {
         super.viewDidLoad()
-        let generator = SecretValue(minRangeValue: 1, maxRangeValue: 50)!
-        game = Game(valueGenerator: generator, roundsCount: 3) // Создаем экземпляр сущности "Игра"
+        game = (GameFactory.makeNumericGame(rounds: 5) as! Game<SectretNumericValue>)
         // Обновляем данные о текущем значении загаданного числа
-        updateLabel(with: game.currentRound.currentSecretValue)
+        updateLabel(with: game.secretValue.value)
     }
     
     // MARK: - Взаимодействие View - Model
     
     @IBAction func checkNumber() {
         // Высчитываем очки за раунд
-        game.currentRound.calculateScore(with: Int(slider.value))
+        var userSecretValue = game.secretValue // получаем новый экземпляр SecretValue<Int>
+        userSecretValue.value = Int(slider.value) // обновляем его значение новым из слайдера
+        //сравниваем экземпляр загаданного значения с экземпляром с новым значением, уст пользователем
+        game.calculateScore(secretValue: game.secretValue, userValue: userSecretValue)
         // Проверяем, окончена ли игра
        if game.isGameFinished {
            showAlert(with: game.totalScore)
@@ -36,7 +38,7 @@ class NumberGameController: UIViewController {
        } else {
            game.startNewRound()
        }
-        updateLabel(with: game.currentRound.currentSecretValue)
+        updateLabel(with: game.secretValue.value)
     }
     
     // MARK: - Обновление View

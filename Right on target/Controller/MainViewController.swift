@@ -8,6 +8,11 @@
 import UIKit
 
 class MainViewController: UIViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .white
+    }
 
     @IBAction func numberBtnTapped() {
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NumberViewController")

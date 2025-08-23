@@ -12,14 +12,14 @@ protocol SecretValueProtocol {
     // ассоциированный тип, который будет определять тип данных значения
     associatedtype ValueType
     // само загаданное значение
-    var value: ValueType { get }
+    var value: ValueType { get set }
     // изменяет текущее значение на случайное значение
     mutating func setRandomValue()
 }
 
 struct SecretValue<T: Equatable>: SecretValueProtocol {
     typealias ValueType = T
-   private(set) var value: T
+    var value: T
     
     private let randomValueClosure: (T) -> T // Сюда будет иниц логика создания рандомного значения
     
@@ -29,6 +29,6 @@ struct SecretValue<T: Equatable>: SecretValueProtocol {
     }
     
     mutating func setRandomValue() {
-        self.value = randomValueClosure(self.value)
+        self.value = randomValueClosure(self.value) //обновление секретного значения новым рандомным
     }
 }

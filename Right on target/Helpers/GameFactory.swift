@@ -35,7 +35,8 @@ final class GameFactory {
         // 1. Cоздание сущности "SecretValue"
         let initialSecretColor = Color()
         let secretValue = SecretColorValue(initialValue: initialSecretColor) { color in
-             var updatedColor = color
+            // реализация рандома для Color 
+            var updatedColor = color
             updatedColor.red = (0...255).randomElement()!
             updatedColor.green = (0...255).randomElement()!
             updatedColor.blue = (0...255).randomElement()!

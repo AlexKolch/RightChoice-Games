@@ -52,7 +52,7 @@ class Game<T: SecretValueProtocol>: GameProtocol {
     }
     
     func restartGame() {
-       totalScore = 0
+        totalScore = 0
         currentRoundNumber = 0
         startNewRound()
     }
