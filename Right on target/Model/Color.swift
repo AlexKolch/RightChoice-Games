@@ -8,7 +8,7 @@
 import UIKit
 
 protocol ColorProtocol {
-    // каналы цветов
+    // каналы цветов, по этим данным будут сравниваться типы Color
     var red: UInt8 { get set }
     var green: UInt8 { get set }
     var blue: UInt8 { get set }
@@ -20,7 +20,7 @@ protocol ColorProtocol {
     func getByUIColor() -> UIColor
 }
 
-class Color: ColorProtocol, Equatable {
+struct Color: ColorProtocol, Equatable {
     var red: UInt8
     var green: UInt8
     var blue: UInt8
@@ -32,7 +32,7 @@ class Color: ColorProtocol, Equatable {
            blue = 0
        }
     
-    required init(from color: UIColor) {
+    init(from color: UIColor) {
         //получаем данные о каждом канале хранящиеся в UIColor
         self.red = UInt8(color.cgColor.components![0] * CGFloat(255))
         self.green = UInt8(color.cgColor.components![1] * CGFloat(255))
@@ -60,6 +60,7 @@ class Color: ColorProtocol, Equatable {
         return "\(redPart)\(greenPart)\(bluePart)"
     }
     
+    /// Получить цвет
     func getByUIColor() -> UIColor {
         // Для создания значения типа UIColor для всех трех каналов необходимо передать значения типа CGFloat
         //  где каждое значение может меняться в диапазоне от 0.0 (минимальная интенсивность канала) до 1.0 (максимальная интенсивность канала)

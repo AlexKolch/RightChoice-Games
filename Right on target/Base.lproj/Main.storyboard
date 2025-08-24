@@ -19,13 +19,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выберите вариант игры" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XFZ-gf-Pa0">
-                                <rect key="frame" x="345" y="196.5" width="206" height="21"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="329" y="195" width="238.5" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NNm-jF-wnh">
-                                <rect key="frame" x="667" y="189.5" width="73" height="35"/>
+                                <rect key="frame" x="683.5" y="189.5" width="73" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Числа"/>
                                 <connections>
@@ -33,7 +33,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mmu-b3-amJ">
-                                <rect key="frame" x="163.5" y="189.5" width="71.5" height="35"/>
+                                <rect key="frame" x="147.5" y="189.5" width="71.5" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Цвета"/>
                                 <connections>
@@ -130,41 +130,69 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="87K-dg-xnf">
                                 <rect key="frame" x="98" y="148.5" width="700" height="34.5"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HBg-Jw-bhd">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HBg-Jw-bhd">
                                         <rect key="frame" x="0.0" y="0.0" width="103" height="34.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Вариант 1"/>
+                                        <connections>
+                                            <action selector="compareValue:" destination="qKO-3J-ktF" eventType="touchUpInside" id="FG7-rX-M8c"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rvv-lo-pAU">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rvv-lo-pAU">
                                         <rect key="frame" x="196" y="0.0" width="105.5" height="34.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Вариант 2"/>
+                                        <connections>
+                                            <action selector="compareValue:" destination="qKO-3J-ktF" eventType="touchUpInside" id="QQd-EW-Qjf"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1pd-co-s3C">
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1pd-co-s3C">
                                         <rect key="frame" x="395" y="0.0" width="106" height="34.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Вариант 3"/>
+                                        <connections>
+                                            <action selector="compareValue:" destination="qKO-3J-ktF" eventType="touchUpInside" id="Z4s-QM-QSw"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="awe-YF-gXZ">
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="awe-YF-gXZ">
                                         <rect key="frame" x="594" y="0.0" width="106" height="34.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Вариант 4"/>
+                                        <connections>
+                                            <action selector="compareValue:" destination="qKO-3J-ktF" eventType="touchUpInside" id="2Fh-zV-VJr"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="tintColor" systemColor="labelColor"/>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IbB-NB-rSE">
+                                <rect key="frame" x="427.5" y="315.5" width="41.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hPD-h9-0sW"/>
                         <color key="backgroundColor" systemColor="systemCyanColor"/>
                         <constraints>
+                            <constraint firstItem="IbB-NB-rSE" firstAttribute="centerX" secondItem="9n5-Ez-hSj" secondAttribute="centerX" id="4nd-Td-p16"/>
                             <constraint firstItem="hRn-vo-AhU" firstAttribute="centerX" secondItem="9n5-Ez-hSj" secondAttribute="centerX" id="748-ba-m88"/>
                             <constraint firstItem="87K-dg-xnf" firstAttribute="leading" secondItem="hPD-h9-0sW" secondAttribute="leading" constant="50" id="9mq-10-Bud"/>
                             <constraint firstItem="hPD-h9-0sW" firstAttribute="trailing" secondItem="87K-dg-xnf" secondAttribute="trailing" constant="50" id="DjY-FV-4BV"/>
                             <constraint firstItem="HBg-Jw-bhd" firstAttribute="top" secondItem="hRn-vo-AhU" secondAttribute="bottom" constant="70" id="K3y-il-jLK"/>
+                            <constraint firstItem="hPD-h9-0sW" firstAttribute="bottom" secondItem="IbB-NB-rSE" secondAttribute="bottom" constant="23" id="igK-Xt-BWd"/>
                             <constraint firstItem="hRn-vo-AhU" firstAttribute="top" secondItem="hPD-h9-0sW" secondAttribute="top" constant="10" id="o7H-WO-Wlc"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="iwH-wY-7ZN"/>
+                    <connections>
+                        <outlet property="HEXLabel" destination="hRn-vo-AhU" id="pnV-fw-Wjf"/>
+                        <outlet property="buttonColor1" destination="HBg-Jw-bhd" id="lBb-UT-vrW"/>
+                        <outlet property="buttonColor2" destination="rvv-lo-pAU" id="eaU-zR-laj"/>
+                        <outlet property="buttonColor3" destination="1pd-co-s3C" id="zkM-t6-nU0"/>
+                        <outlet property="buttonColor4" destination="awe-YF-gXZ" id="zqq-tO-yd0"/>
+                        <outlet property="scoreLabel" destination="IbB-NB-rSE" id="Z88-bU-RhE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vGw-sb-oM2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
