@@ -13,5 +13,5 @@
 * Custom types
 
 ---
-![Image alt](https://github.com/AlexKolch/RightChoice-Games/blob/version-1.4/Screen/Screenshot-1.jpg)
-![Image alt](https://github.com/AlexKolch/RightChoice-Games/blob/version-1.4/Screen/Screenshot-2.jpg)
+![Image alt](https://github.com/AlexKolch/RightChoice-Games/blob/Main/Screen/Screenshot-1.jpg)
+![Image alt](https://github.com/AlexKolch/RightChoice-Games/blob/Main/Screen/Screenshot-2.jpg)
